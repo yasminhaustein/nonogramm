@@ -81,7 +81,7 @@ pic_matrix = []
 
 
 def prepare():
-    for i in range(0,len(zeilen),1):
+    for i in range(0, len(zeilen), 1):
         pic_matrix.append([])
         for j in range (0, len(spalten), 1):
             pic_matrix[i].append("  ")
@@ -93,7 +93,7 @@ def printThePicture():
         zeile = "|"
         for j in range(0, len(spalten), 1):
             zeile += str(pic_matrix[i][j])
-        zeile+= "|"
+        zeile += "|"
         print (zeile)
     print("|         ||        ||        ||         |")
 
@@ -179,17 +179,24 @@ def zahlenVomRand (orientation, height):
 
 
 #def punkteSetzen (orientation, height):
-    #if orientation == "zeilen":
+ #   if orientation == "zeilen":*/
+
 
 def main():
     prepare()
 
     for i in range(0,len(zeilen),1):
         grosseZahlen("zeilen", i)
+    printThePicture()
+
     for i in range(0,len(zeilen),1):
         grosseZahlen("spalten", i)
+    printThePicture()
+
     for i in range(0, len(zeilen),1):
         zahlenVomRand("zeilen", i)
+    printThePicture()
+
     for i in range(0, len(zeilen), 1):
         zahlenVomRand("spalten", i)
     printThePicture()
